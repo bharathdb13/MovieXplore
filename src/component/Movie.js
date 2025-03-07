@@ -17,7 +17,7 @@ function Movie() {
             return;
         }
 
-        let url = `http://www.omdbapi.com/?s=${query}&apikey=1a3cdeee`;
+        let url = `https://www.omdbapi.com/?s=${query}&apikey=1a3cdeee`;
 
         if (year) {
             url += `&y=${year}`;
