@@ -68,3 +68,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Running with Docker
+
+Docker Desktop or Docker Engine must be installed. 
+
+## 🐳 Dockerizing the Frontend
+
+This project uses a **multi-stage Docker build** to:
+1. Build the React application using Node.js
+2. Serve the optimized production build using Nginx
+
+This approach results in a **smaller, faster, and production-ready Docker image**.
+
+To build the application
+ `docker build -t moviexplore-frontend .`
+
+ Docker Image will be created.
+
+ `docker images`
+
+
+ Run the image to create container with the port, container will run.
+
+ `docker run -p 3000:80 moviexplore-frontend `
+
+ visit `http://loclhost:3000`
+
